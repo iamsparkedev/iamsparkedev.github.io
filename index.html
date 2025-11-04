@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <meta name="description" content="Personal portfolio of projects and experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💼</text></svg>">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <a class="logo" href="#home" aria-label="Go to home">MyPortfolio</a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+        <nav class="site-nav" role="navigation">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero" aria-label="Intro">
+            <div class="hero-inner">
+                <h1>Hi, I'm <span class="accent">Your Name</span>.</h1>
+                <p class="subtitle">I build clean, performant web experiences.</p>
+                <div class="cta-group">
+                    <a class="btn primary" href="#projects">View Projects</a>
+                    <a class="btn" href="#contact">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>
+                I'm a developer focused on creating delightful, accessible, and efficient interfaces.
+                I enjoy working across the stack and turning ideas into products.
+            </p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="card">
+                    <h3>Project One</h3>
+                    <p>Short description of what it does and why it's cool.</p>
+                    <div class="card-actions">
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Project Two</h3>
+                    <p>Short description of the tech and the outcome.</p>
+                    <div class="card-actions">
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Project Three</h3>
+                    <p>Short description of your role and challenges solved.</p>
+                    <div class="card-actions">
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Want to collaborate or say hi? Reach out:</p>
+            <ul class="contact-list">
+                <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // Inline for year fallback if JS loads late
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    </body>
+    </html>
+
+
