@@ -1,98 +1,240 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <meta name="description" content="Personal portfolio of projects and experience.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💼</text></svg>">
-</head>
-<body>
-    <header class="site-header" role="banner">
-        <a class="logo" href="#home" aria-label="Go to home">MyPortfolio</a>
-        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
-        <nav class="site-nav" role="navigation">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IamSparkeDev</title>
+    <meta
+      name="description"
+      content="Portfolio — Freelance Student and Open-Source Developer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#">SP</a>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#badges">Badges</a>
+        <a href="#contact">Contact</a>
+        <a
+          class="icon"
+          href="https://github.com/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.16c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.09-.74.09-.74 1.21.09 1.85 1.24 1.85 1.24 1.08 1.85 2.83 1.32 3.52 1.01.11-.78.42-1.32.77-1.62-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .5Z"
+            />
+          </svg>
+        </a>
+      </nav>
     </header>
 
-    <main id="home">
-        <section class="hero" aria-label="Intro">
-            <div class="hero-inner">
-                <h1>Hi, I'm <span class="accent">Your Name</span>.</h1>
-                <p class="subtitle">I build clean, performant web experiences.</p>
-                <div class="cta-group">
-                    <a class="btn primary" href="#projects">View Projects</a>
-                    <a class="btn" href="#contact">Get in Touch</a>
-                </div>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__inner">
+          <h1 class="headline reveal-up">
+            Hi <span class="wave">👋</span>, I'm Sparke
+          </h1>
+          <p class="subhead reveal-up" style="--delay: 0.08s">
+            I Like to build stuff
+          </p>
+          <div class="cta reveal-up" style="--delay: 0.16s">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="hero__diagonal" aria-hidden="true"></div>
+        <a class="scroll-down" href="#projects" aria-label="Scroll to projects">
+          <span>↓</span>
+        </a>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="container">
+          <h2 class="section__title">Projects</h2>
+          <div class="grid">
+            <!-- Project cards -->
+            <article class="card reveal-up" data-repo="What2do" role="link" tabindex="0">
+              <div class="card__top">
+                <h3>What2do</h3>
+                <span class="lang">Golang</span>
+              </div>
+              <p>CLI Based TO-DO App.</p>
+              <div class="meta">
+                <span>⭐ 0</span>
+                <span>🔀 0</span>
+              </div>
+            </article>
+
+            <!-- <article class="card reveal-up" style="--delay: 0.06s">
+              <div class="card__top">
+                <h3>SoulFire</h3>
+                <span class="lang">Java</span>
+              </div>
+              <p>
+                Advanced Minecraft server‑stresser tool. Launch bot attacks to
+                measure performance.
+              </p>
+              <div class="meta">
+                <span>⭐ 0</span>
+                <span>🔀 0</span>
+              </div>
+            </article>
+
+            <article class="card reveal-up" style="--delay: 0.12s">
+              <div class="card__top">
+                <h3>SoulFireClient</h3>
+                <span class="lang">TypeScript</span>
+              </div>
+              <p>Frontend client for SoulFire.</p>
+              <div class="meta">
+                <span>⭐ 0</span>
+                <span>🔀 0</span>
+              </div>
+            </article>
+
+            <article class="card reveal-up" style="--delay: 0.18s">
+              <div class="card__top">
+                <h3>PistonMOTD</h3>
+                <span class="lang">Java</span>
+              </div>
+              <p>
+                Control your Minecraft server's MOTD. Supports RGB colors and
+                multiple platforms.
+              </p>
+              <div class="meta">
+                <span>⭐ 44</span>
+                <span>🔀 10</span>
+              </div>
+            </article>
+
+            <article class="card reveal-up" style="--delay: 0.24s">
+              <div class="card__top">
+                <h3>PistonQueue</h3>
+                <span class="lang">Java</span>
+              </div>
+              <p>Powerful queue plugin for anarchy/survival servers.</p>
+              <div class="meta">
+                <span>⭐ 59</span>
+                <span>🔀 19</span>
+              </div>
+            </article>
+
+            <article class="card reveal-up" style="--delay: 0.3s">
+              <div class="card__top">
+                <h3>PistonPost</h3>
+                <span class="lang">TypeScript</span>
+              </div>
+              <p>Open source platform inspired by Reddit.</p>
+              <div class="meta">
+                <span>⭐ 3</span>
+                <span>🔀 0</span>
+              </div>
+            </article> -->
+          </div>
+          <div class="center">
+            <a class="btn btn--soft" href="#">And more!</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section badges" id="badges">
+        <div class="container">
+          <h2 class="section__title">Me in badges</h2>
+          <div class="badges__wrap">
+            <span class="badge">Golang</span>
+            <span class="badge">Python</span>
+            <span class="badge">shell</span>
+            <span class="badge">Postgres</span>
+            <span class="badge">MongoDB</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Docker</span>
+            <span class="badge">GitHub Actions</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Windows</span>
+            <span class="badge">Nginx</span>
+            <span class="badge">Vercel</span>
+            <span class="badge">Android</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact__inner">
+          <div class="contact__text">
+            <h2 class="section__title">let,s connect ?</h2>
+            <p>I'm available for collaborations.</p>
+            <div class="cta">
+              <a class="btn" href="mailto:iamsparkereal@gmail.com">Email me</a>
+              <a
+                class="btn btn--ghost"
+                href="https://github.com/iamsparkedev"
+                target="_blank"
+                rel="noreferrer"
+                >Follow on GitHub</a
+              >
             </div>
-        </section>
+          </div>
+          <div class="contact__social">
+            <a
+              class="chip"
+              href="https://github.com/iamsparkedev"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
+            <a
+              class="chip"
+              href="https://discord.gg/Z9pP729aGY"
+              target="_blank"
+              rel="noreferrer"
+              >Discord</a
+            >
+            <a
+              class="chip"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noreferrer"
+              >Twitter</a
+            >
+            <a
+              class="chip"
+              href="https://linkedin.com/in/sajid-hasan-119142372"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
 
-        <section id="about" class="section">
-            <h2>About</h2>
-            <p>
-                I'm a developer focused on creating delightful, accessible, and efficient interfaces.
-                I enjoy working across the stack and turning ideas into products.
-            </p>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <article class="card">
-                    <h3>Project One</h3>
-                    <p>Short description of what it does and why it's cool.</p>
-                    <div class="card-actions">
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <h3>Project Two</h3>
-                    <p>Short description of the tech and the outcome.</p>
-                    <div class="card-actions">
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <h3>Project Three</h3>
-                    <p>Short description of your role and challenges solved.</p>
-                    <div class="card-actions">
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
-                        <a class="btn small" href="#" target="_blank" rel="noopener">Code</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Want to collaborate or say hi? Reach out:</p>
-            <ul class="contact-list">
-                <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-            </ul>
-        </section>
+            <iframe
+              src="https://discord.com/widget?id=1418891584732266669&theme=dark"
+              width="350"
+              height="350"
+              allowtransparency="true"
+              frameborder="0"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Sparke. Built with ❤️</p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-    // Inline for year fallback if JS loads late
-    document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    </body>
-    </html>
-
-
+    <script src="dist/main.js" type="module"></script>
+  </body>
+</html>
