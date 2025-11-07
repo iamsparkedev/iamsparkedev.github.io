@@ -1,0 +1,238 @@
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  background-color: var(--dark-bg);
+  padding: 4rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-social-icon {
+  color: var(--text-white);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-social-icon:hover {
+  color: var(--scrollbar-green);
+  background-color: rgba(80, 250, 123, 0.1);
+  transform: translateY(-3px) scale(1.1);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.follow-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #44475a;
+  color: var(--text-white);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: #555769;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.discord-widget {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  min-width: 300px;
+  transition: all 0.3s ease;
+  animation: discordPulse 3s ease-in-out infinite;
+}
+
+@keyframes discordPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(88, 101, 242, 0);
+  }
+}
+
+.discord-widget:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+}
+
+.discord-avatar {
+  flex-shrink: 0;
+}
+
+.discord-avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  animation: avatarGlow 2s ease-in-out infinite;
+}
+
+.discord-avatar-circle::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0.5;
+  filter: blur(8px);
+  z-index: -1;
+  animation: avatarGlow 2s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.discord-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.discord-name {
+  font-weight: 600;
+  color: var(--text-white);
+  font-size: 1rem;
+}
+
+.discord-status {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.discord-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4752c4;
+  color: var(--text-white);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.discord-button:hover {
+  background-color: #3c45a5;
+  transform: scale(1.05);
+}
+
+.footer-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--scrollbar-green);
+  animation: lineGrow 1s ease-out 0.5s both;
+}
+
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-right {
+    align-items: flex-start;
+  }
+
+  .discord-widget {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
