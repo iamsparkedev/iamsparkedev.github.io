@@ -1,13 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Update this to match your GitHub repository name
-// If your repo is named "username.github.io", use base: '/'
-const REPO_NAME = 'personal-site';
-
+// For custom domains (like iamsparke.xyz), use base: '/'
+// For GitHub Pages subdomain (username.github.io/repo-name), use base: '/repo-name/'
 export default defineConfig({
   plugins: [react()],
-  base: `/${REPO_NAME}/`,
+  base: '/', // Changed to '/' for custom domain deployment
   build: {
     outDir: 'dist',
   },

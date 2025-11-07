@@ -10,6 +10,8 @@ interface Project {
   language: string;
   languageColor: string;
   repo: string;
+  username: string;
+  repoName: string;
 }
 
 const projects: Project[] = [
@@ -22,6 +24,8 @@ const projects: Project[] = [
     language: 'Shell',
     languageColor: '#89e051',
     repo: 'https://github.com/username/balena-minecraft-server',
+    username: 'username',
+    repoName: 'balena-minecraft-server',
   },
   {
     title: 'SoulFire',
@@ -32,6 +36,8 @@ const projects: Project[] = [
     language: 'Java',
     languageColor: '#b07219',
     repo: 'https://github.com/username/SoulFire',
+    username: 'username',
+    repoName: 'SoulFire',
   },
   {
     title: 'SoulFireClient',
@@ -42,6 +48,8 @@ const projects: Project[] = [
     language: 'TypeScript',
     languageColor: '#2b7489',
     repo: 'https://github.com/username/SoulFireClient',
+    username: 'username',
+    repoName: 'SoulFireClient',
   },
   {
     title: 'PistonMOTD',
@@ -52,6 +60,8 @@ const projects: Project[] = [
     language: 'Java',
     languageColor: '#b07219',
     repo: 'https://github.com/username/PistonMOTD',
+    username: 'username',
+    repoName: 'PistonMOTD',
   },
   {
     title: 'PistonQueue',
@@ -62,6 +72,8 @@ const projects: Project[] = [
     language: 'Java',
     languageColor: '#b07219',
     repo: 'https://github.com/username/PistonQueue',
+    username: 'username',
+    repoName: 'PistonQueue',
   },
   {
     title: 'PistonPost',
@@ -72,6 +84,8 @@ const projects: Project[] = [
     language: 'TypeScript',
     languageColor: '#2b7489',
     repo: 'https://github.com/username/PistonPost',
+    username: 'username',
+    repoName: 'PistonPost',
   },
 ];
 
@@ -104,23 +118,21 @@ const Projects: React.FC = () => {
               </div>
               
               <div className="project-metrics">
-                <div className="metric">
-                  <span className="metric-icon">⭐</span>
-                  <span>{project.stars}</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-icon">🍴</span>
-                  <span>{project.forks}</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-icon">&lt;/&gt;</span>
-                  <span 
-                    className="metric-language"
-                    style={{ color: project.languageColor }}
-                  >
-                    {project.language}
-                  </span>
-                </div>
+                <img
+                  src={`https://img.shields.io/github/stars/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Stars`}
+                  alt={`${project.title} stars`}
+                  className="shields-badge"
+                />
+                <img
+                  src={`https://img.shields.io/github/forks/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Forks`}
+                  alt={`${project.title} forks`}
+                  className="shields-badge"
+                />
+                <img
+                  src={`https://img.shields.io/github/languages/top/${project.username}/${project.repoName}?style=flat-square&logoColor=white&labelColor=6b2a38&color=white&label=Language`}
+                  alt={`${project.title} language`}
+                  className="shields-badge"
+                />
               </div>
             </div>
           ))}
