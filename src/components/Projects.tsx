@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: 'balena-minecraft-server',
     description: 'Build a Minecraft Server using a Raspberry Pi 4! Supports common Servers, SCP, RCON and Wifi Connect.',
     icon: '👤',
-    stars: 205,
+    stars: 25,
     forks: 65,
     language: 'Shell',
     languageColor: '#89e051',
