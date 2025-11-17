@@ -24,8 +24,8 @@ const projects: Project[] = [
     language: 'Shell',
     languageColor: '#89e051',
     repo: 'https://github.com/iamsparkedev/mcserver-info',
-    username: 'username',
-    repoName: 'balena-minecraft-server',
+    username: 'iamsparkedev',
+    repoName: 'mcserver-info',
   },
   {
     title: 'SoulFire',
