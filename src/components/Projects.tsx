@@ -22,7 +22,7 @@ const projects: Project[] = [
     stars: 5,
     forks: 5,
     language: 'Go',
-    languageColor: '89e051',
+    languageColor: '#89e051',
     repo: 'https://github.com/iamsparkedev/mcserver-info',
     username: 'iamsparkedev',
     repoName: 'mcserver-info',
