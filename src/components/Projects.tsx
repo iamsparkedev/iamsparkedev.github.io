@@ -16,14 +16,14 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'balena-minecraft-server',
+    title: 'mcserver-info',
     description: 'Build a Minecraft Server using a Raspberry Pi 4! Supports common Servers, SCP, RCON and Wifi Connect.',
     icon: '👤',
     stars: 25,
     forks: 65,
     language: 'Shell',
     languageColor: '#89e051',
-    repo: 'https://github.com/username/balena-minecraft-server',
+    repo: 'https://github.com/iamsparkedev/mcserver-info',
     username: 'username',
     repoName: 'balena-minecraft-server',
   },
