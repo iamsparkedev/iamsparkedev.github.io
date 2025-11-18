@@ -9,6 +9,7 @@ interface Project {
   forks: number;
   language: string;
   languageColor: string;
+  logoSlug: string;
   repo: string;
   username: string;
   repoName: string;
