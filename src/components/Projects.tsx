@@ -21,8 +21,9 @@ const projects: Project[] = [
     icon: '🌐',
     stars: 5,
     forks: 5,
-    language: 'go',
+    language: 'Go',
     languageColor: '#89e051',
+    logoSlug: 'go',
     repo: 'https://github.com/iamsparkedev/mcserver-info',
     username: 'iamsparkedev',
     repoName: 'mcserver-info',
@@ -35,6 +36,7 @@ const projects: Project[] = [
     forks: 3,
     language: 'java',
     languageColor: '#b07219',
+    logoSlug: 'java',
     repo: 'https://github.com/iamsparkedev/What2do',
     username: 'iamsparkedev',
     repoName: 'what2do',
@@ -47,6 +49,7 @@ const projects: Project[] = [
     forks: 1,
     language: 'typeScript',
     languageColor: '#2b7489',
+    logoSlug: 'java',
     repo: 'https://github.com/username/SoulFireClient',
     username: 'username',
     repoName: 'SoulFireClient',
@@ -59,6 +62,7 @@ const projects: Project[] = [
     forks: 0,
     language: 'java',
     languageColor: '#b07219',
+    logoSlug: 'java',
     repo: 'https://github.com/username/PistonMOTD',
     username: 'username',
     repoName: 'PistonMOTD',
@@ -71,6 +75,7 @@ const projects: Project[] = [
     forks: 9,
     language: 'java',
     languageColor: '#b07219',
+    logoSlug: 'java',
     repo: 'https://github.com/username/PistonQueue',
     username: 'username',
     repoName: 'PistonQueue',
@@ -83,6 +88,7 @@ const projects: Project[] = [
     forks: 0,
     language: 'typeScript',
     languageColor: '#2b7489',
+    logoSlug: 'java',
     repo: 'https://github.com/username/PistonPost',
     username: 'username',
     repoName: 'PistonPost',
@@ -129,9 +135,9 @@ const Projects: React.FC = () => {
                   className="shields-badge"
                 />
                 <img
-                  src={`https://img.shields.io/badge/%20%20-6b2a38?style=for-the-badge&logoColor=${project.languageColor}&logo=${project.language}`}
-                  alt={`${project.title} language`}
-                  className="shields-badge"
+                 src={`https://img.shields.io/badge/${encodeURIComponent(project.language)}-${project.languageColor}?style=for-the-badge&logo=${project.logoSlug}&logoColor=white`}
+                 alt={`${project.title} language`}
+                 className="shields-badge"
                 /> 
                 
               </div>
