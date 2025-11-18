@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
                   className="shields-badge"
                 />
                 <img
-                  src={`https://img.shields.io/badge/%20%20-white?style=for-the-badge&logoColor=white&labelColor=6b2a38&color=${project.languageColor}&label=${project.language}`}
+                  src={`https://img.shields.io/badge/%20%20-6b2a38?style=for-the-badge&logoColor=${project.languageColor}&logo=${project.language}`}
                   alt={`${project.title} language`}
                   className="shields-badge"
                 /> 
