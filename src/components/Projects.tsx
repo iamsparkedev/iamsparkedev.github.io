@@ -136,7 +136,7 @@ const Projects: React.FC = () => {
                   className="shields-badge"
                 />
                 <img
-                 src={`https://img.shields.io/badge/${encodeURIComponent(project.language)}-${project.languageColor}?style=for-the-badge&logo=${project.logoSlug}&logoColor=white`}
+                 src={`https://img.shields.io/badge/${project.language}-${project.languageColor}?style=for-the-badge&logo=${project.logoSlug}&logoColor=white`}
                  alt={`${project.title} language`}
                  className="shields-badge"
                 /> 
