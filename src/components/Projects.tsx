@@ -35,9 +35,9 @@ const projects: Project[] = [
     icon: '🤖',
     stars: 4,
     forks: 3,
-    language: 'java',
+    language: 'Go',
     languageColor: '#b07219',
-    logoSlug: 'java',
+    logoSlug: 'go',
     repo: 'https://github.com/iamsparkedev/What2do',
     username: 'iamsparkedev',
     repoName: 'what2do',
@@ -50,7 +50,7 @@ const projects: Project[] = [
     forks: 1,
     language: 'typeScript',
     languageColor: '#2b7489',
-    logoSlug: 'java',
+    logoSlug: 'typescript',
     repo: 'https://github.com/username/SoulFireClient',
     username: 'username',
     repoName: 'SoulFireClient',
@@ -63,7 +63,7 @@ const projects: Project[] = [
     forks: 0,
     language: 'java',
     languageColor: '#b07219',
-    logoSlug: 'java',
+    logoSlug: 'openjdk',
     repo: 'https://github.com/username/PistonMOTD',
     username: 'username',
     repoName: 'PistonMOTD',
@@ -76,7 +76,7 @@ const projects: Project[] = [
     forks: 9,
     language: 'java',
     languageColor: '#b07219',
-    logoSlug: 'java',
+    logoSlug: 'openjdk',
     repo: 'https://github.com/username/PistonQueue',
     username: 'username',
     repoName: 'PistonQueue',
@@ -89,7 +89,7 @@ const projects: Project[] = [
     forks: 0,
     language: 'typeScript',
     languageColor: '#2b7489',
-    logoSlug: 'java',
+    logoSlug: 'typescript',
     repo: 'https://github.com/username/PistonPost',
     username: 'username',
     repoName: 'PistonPost',
@@ -136,7 +136,7 @@ const Projects: React.FC = () => {
                   className="shields-badge"
                 />
                 <img
-                 src={`https://img.shields.io/badge/${project.language}-6b2a38?style=for-the-badge&logo=${project.logoSlug}&logoColor=${project.languageColor}`}
+                 src={`https://img.shields.io/badge/${project.language}-6b2a38?style=for-the-badge&logo=${project.logoSlug}`}
                  alt={`${project.title} language`}
                  className="shields-badge"
                 /> 
