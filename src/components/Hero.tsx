@@ -11,7 +11,8 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero">
-      <div className="hero-diagonal-split"></div>
+      <div className="hero-background-glow"></div>
+
 
       <div className="hero-content">
         <div className="hero-social-icons">
