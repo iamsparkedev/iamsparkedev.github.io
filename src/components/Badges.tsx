@@ -39,11 +39,14 @@ const Badges: React.FC = () => {
               className="badge-wrapper"
               style={{ animationDelay: `${index * 0.05}s` } as React.CSSProperties}
             >
-              <img
-                src={`https://img.shields.io/badge/${encodeURIComponent(badge.name)}-${badge.color}?style=for-the-badge&logo=${badge.slug}&logoColor=${badge.logoColor || 'white'}`}
-                alt={badge.name}
-                className="badge-image"
-              />
+              <div className="badge-bottom"></div>
+              <div className="badge-top">
+                <img
+                  src={`https://img.shields.io/badge/${encodeURIComponent(badge.name)}-${badge.color}?style=for-the-badge&logo=${badge.slug}&logoColor=${badge.logoColor || 'white'}`}
+                  alt={badge.name}
+                  className="badge-image"
+                />
+              </div>
             </div>
           ))}
         </div>
