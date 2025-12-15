@@ -115,36 +115,33 @@ const Projects: React.FC = () => {
               onClick={() => handleCardClick(project.repo)}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="card-bottom"></div>
-              <div className="card-top">
-                <div className="project-header">
-                  <span className="project-folder-icon">📁</span>
-                  <h3 className="project-title">{project.title}</h3>
-                </div>
+              <div className="project-header">
+                <span className="project-folder-icon">📁</span>
+                <h3 className="project-title">{project.title}</h3>
+              </div>
 
-                <div className="project-description">
-                  <span className="project-icon">{project.icon}</span>
-                  <p>{project.description}</p>
-                </div>
+              <div className="project-description">
+                <span className="project-icon">{project.icon}</span>
+                <p>{project.description}</p>
+              </div>
 
-                <div className="project-metrics">
-                  <img
-                    src={`https://img.shields.io/github/stars/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Stars`}
-                    alt={`${project.title} stars`}
-                    className="shields-badge"
-                  />
-                  <img
-                    src={`https://img.shields.io/github/forks/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Forks`}
-                    alt={`${project.title} forks`}
-                    className="shields-badge"
-                  />
-                  <img
-                    src={`https://img.shields.io/badge/${project.language}-6b2a38?style=for-the-badge&logo=${project.logoSlug}`}
-                    alt={`${project.title} language`}
-                    className="shields-badge"
-                  />
+              <div className="project-metrics">
+                <img
+                  src={`https://img.shields.io/github/stars/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Stars`}
+                  alt={`${project.title} stars`}
+                  className="shields-badge"
+                />
+                <img
+                  src={`https://img.shields.io/github/forks/${project.username}/${project.repoName}?style=flat-square&logo=github&logoColor=white&labelColor=6b2a38&color=white&label=Forks`}
+                  alt={`${project.title} forks`}
+                  className="shields-badge"
+                />
+                <img
+                  src={`https://img.shields.io/badge/${project.language}-6b2a38?style=for-the-badge&logo=${project.logoSlug}`}
+                  alt={`${project.title} language`}
+                  className="shields-badge"
+                />
 
-                </div>
               </div>
             </div>
           ))}
@@ -159,4 +156,3 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
-
