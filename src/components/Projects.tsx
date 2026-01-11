@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     title: 'What2Do',
-    description: 'A CLI TO-DO APP.',
+    description: 'A CLI TO-DO App.',
     icon: '🤖',
     stars: 4,
     forks: 3,
