@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <h3 className="footer-title">Let,s Connect?</h3>
             <div className="footer-social-icons">
               <a
-                href="https://twitter.com"
+                href="https://x.com/sparkedev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-icon"
